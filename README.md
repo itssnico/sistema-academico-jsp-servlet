@@ -6,4 +6,4 @@
 * Tenha o Apache 9.0 instalado para rodar a aplicação
 * Caso dê erro no *ServletAluno* faça o seguinte:
   *  sistema-academico-jsp-servlet -> propriedades -> Java Build Path -> Libraries -> Class Path -> add Library -> Server Runtime -> selecione o apache
-* Inicie o index.html
+* Inicie o index.html em um servidor Apache 9.0
