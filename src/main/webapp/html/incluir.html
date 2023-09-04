@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sistema Acadêmico</title>
+</head>
+<body>
+	
+	<h1>Cadastro de Aluno</h1>
+	<form method="get" action="../ServletAluno">
+		<a href="../index.html">Página Inicial</a>
+		<br/>
+		<input type="hidden" name="cmd" value="salvar"/>
+		Ra<input type="text" size="40" 
+			name="txtRa" required /> <br /> 
+		Nome<input type="text" size="40" 
+			name="txtNome" required /><br /> 
+		Email<input type="email" size="40" 
+			name="txtEmail" required /> <br />
+		Endereço<input type="text" size="40" 
+			name="txtEndereco" required /> <br />
+		Data de Nascimento<input type="date" size="10" 
+			name="txtData" required /> <br />
+		Período<select size="1" name="cmbPeriodo">
+			<option>Manhã</option>
+			<option>Tarde</option>
+			<option>Noite</option>
+		</select><br />
+		<input type="submit" value="Salvar"/>
+		<input type="reset" value="Novo"/>
+	</form>	
+</body>
+</html>
