@@ -3,21 +3,47 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
 <html>
-<head>
 <meta charset="UTF-8">
-<title>Sistema Acadêmico</title>
+<link rel="style" href="css/style.css">
+<title>Sistema Academico</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="icon" href="https://cdn3.iconfinder.com/data/icons/halloween-avatar-01/348/halloween_avatar-20-512.png" type="image/x-icon">
+<style>
+       body {
+       background-image: url(imgs/background.jpg);
+       background-size: cover;
+      }
+</style>
 </head>
 <html>
     <head>
         <title>Alterar Aluno</title>
     </head>
    <body>
-        <h2 align="center">Alterar Aluno</h2>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" padding="auto">
+	<a class="navbar-brand">
+       <img src="https://cdn3.iconfinder.com/data/icons/halloween-avatar-01/348/halloween_avatar-20-512.png" width="60px" height="70px">         
+     </a>
+  <a class="navbar-brand" href="ServletAluno?cmd=listar">Alterar Aluno</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav" 	>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Página Inicial</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ServletAluno?cmd=listar">Voltar</a>
+      </li>
+    </ul>
+  </div>
+</nav>
         <jsp:useBean id="aluno" scope="session" class="br.edu.unicid.model.Aluno" />
 		<%
 		SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
 		%>
-	<form action="ServletAluno?cmd=alterar" method="post">
+	<form action="ServletAluno?cmd=alterar" method="post" width="60%" border="3" class="table table-hover table-dark table-striped">
 		<table border="1">
 			<tr>
 				<td>RA:</td>
@@ -57,10 +83,6 @@
 			</tr>
 			<tr>
 				<th colspan="2"><input type="submit" value="Confirmar Atualização"/><a ></a></th>
-			</tr>
-
-			<tr>
-				<th colspan="2"><a href="index.html">Página Principal</a></th>
 			</tr>
 		</table>
 	</form>

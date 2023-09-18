@@ -3,31 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <title>Sistema Acadêmico</title>
+<link rel="icon" href="https://cdn3.iconfinder.com/data/icons/halloween-avatar-01/348/halloween_avatar-20-512.png" type="image/x-icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<style>
+       body {
+       background-image: url(https://getwallpapers.com/wallpaper/full/4/7/a/92676.jpg);
+       background-size: cover;
+      }
+</style>
 </head>
 <body>
-	
-	<h1>Cadastro de Aluno</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" padding="auto">
+	<a class="navbar-brand">
+       <img src="https://cdn3.iconfinder.com/data/icons/halloween-avatar-01/348/halloween_avatar-20-512.png" width="60px" height="70px">         
+     </a>
+  <a class="navbar-brand" href="ServletAluno?cmd=listar">Cadastro de Aluno</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav" 	>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Página Inicial</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../ServletAluno?cmd=listar">Listar Todos</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+	 <div class="container-fluid">
 	<form method="get" action="../ServletAluno">
-		<a href="../index.html">Página Inicial</a>
 		<br/>
 		<input type="hidden" name="cmd" value="salvar"/>
-		Ra<input type="text" size="40" 
+		<div class="form-group">
+		<input class="bg-dark"  placeholder="RA" type="text" size="40" 
 			name="txtRa" required /> <br /> 
-		Nome<input type="text" size="40" 
+		</div>
+		<div class="form-group">
+		<input class="bg-dark"  placeholder="Nome" type="text" size="40" 
 			name="txtNome" required /><br /> 
-		Email<input type="email" size="40" 
+		</div>
+		<div class="form-group">
+		<input class="bg-dark" placeholder="E-mail" type="email" size="40" 
 			name="txtEmail" required /> <br />
-		Endereço<input type="text" size="40" 
+		</div>
+		<div class="form-group">
+		<input class="bg-dark" placeholder="Endereço" type="text" size="40" 
 			name="txtEndereco" required /> <br />
-		Data de Nascimento<input type="date" size="10" 
+		</div>
+		<div class="form-group" style="color: white;">
+		Data de Nascimento: <input class="bg-dark text-secondary"  placeholder="Data de Nascimento" type="date" size="10" 
 			name="txtData" required /> <br />
-		Período<select size="1" name="cmbPeriodo">
+		</div>
+		<div class="dropdown" data-bs-theme="dark" style="color: white;">
+		Período: <select placeholder="Periodo" size="1" name="cmbPeriodo">
 			<option>Manhã</option>
 			<option>Tarde</option>
 			<option>Noite</option>
 		</select><br />
-		<input type="submit" value="Salvar"/>
-		<input type="reset" value="Novo"/>
+		</div>
+		<input class="bg-dark text-secondary" type="submit" value="Salvar"/>
+		<input class="bg-dark text-secondary" type="reset" value="Novo"/>
 	</form>	
+	</div>
 </body>
 </html>
