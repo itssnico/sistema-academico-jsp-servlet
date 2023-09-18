@@ -1,6 +1,10 @@
 # CRUD de um Sistema Acadêmico feito com JSP e Servlet
 <h1>Como rodar a aplicação?</h1>
 
-* Pegue o Script SQL e o excute.
+* Baixe o ZIP do repositório, o Extraia e copie/cole na pasta *eclispe-workspace*
+* Abra o repositório extráido no Eclipse JEE Web
+* Copie o Script SQL, cole no MySQLWorkbench e o excute.
 * Tenha o Apache 9.0 instalado para rodar a aplicação
-* Inicie o index.html
+* Caso dê erro no *JSP* faça o seguinte:
+  *  *SistemaAcademico* -> propriedades -> Java Build Path -> Libraries -> Class Path -> add Library -> Server Runtime -> selecione o apache
+* Inicie o index.html em um servidor Apache 9.0
