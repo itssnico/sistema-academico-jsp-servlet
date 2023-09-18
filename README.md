@@ -1,4 +1,4 @@
-# CRUD de um Sistema Acadêmico feito com JSP e Servlet
+# CRUD de um Sistema Acadêmico feito com JSP, Servlet e Bootstrap
 <h1>Como rodar a aplicação?</h1>
 
 * Baixe o ZIP do repositório, o Extraia e copie/cole na pasta *eclispe-workspace*
