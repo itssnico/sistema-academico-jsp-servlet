@@ -18,7 +18,7 @@ public class AlunoDAO {
 	private Aluno aluno;
 
 	public AlunoDAO() throws Exception {
-		// chama a classe ConnectionFactory e estabele uma conex�o
+		// chama a classe ConnectionFactory e estabele uma conexao
 		try {
 			this.conn = ConnectionFactory.getConnection();
 		} catch (Exception e) {
@@ -26,7 +26,7 @@ public class AlunoDAO {
 		}
 	}
 
-	// m�todo de salvar
+	// método de salvar
 
 	public void salvar(Aluno aluno) throws Exception {
 		if (aluno == null)
@@ -49,7 +49,7 @@ public class AlunoDAO {
 		}
 	}
 
-	// m�todo de atualizar
+	// metodo de atualizar
 
 	public void alterar(Aluno aluno) throws Exception {
 		if (aluno == null)
@@ -72,7 +72,7 @@ public class AlunoDAO {
 		}
 	}
 
-	// m�todo de excluir
+	// metodo de excluir
 
 	public void excluir(Aluno aluno) throws Exception {
 		if (aluno == null)

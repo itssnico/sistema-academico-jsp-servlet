@@ -40,7 +40,7 @@
 	<a class="navbar-brand">
        <img src="https://cdn3.iconfinder.com/data/icons/halloween-avatar-01/348/halloween_avatar-20-512.png" width="60px" height="70px">         
      </a>
-  <a class="navbar-brand" href="ServletAluno?cmd=listar">Lista de Alunos</a>
+  <a class="navbar-brand">Lista de Alunos</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -50,7 +50,16 @@
         <a class="nav-link" href="index.html">Página Inicial</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link">/</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="html\incluir.html">Incluir Aluno</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">/</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Voltar</a>
       </li>
     </ul>
   </div>
@@ -64,23 +73,24 @@
 			<th>E-mail</th>
 			<th>Nascimento</th>
 			<th>Periodo</th>
-			<th colspan="2" class="centered">Status</th>
+			<th class="centered" style="text-align:center">&nbsp;&nbsp;Status</th>
+			<th></th>
 		</tr>
 		<%
 		SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
 		List<Aluno> lista = new ArrayList<Aluno>();
 		lista = (ArrayList) request.getAttribute("alunosList");
-		for (Aluno a : lista) {
+		for (Aluno a : lista){
 		%>
 			<tr>
 				<td><%=a.getRa()%></td>
-				<td><%=a.getNome()%></td>
+				<td ><a class="nav-link" href="ServletAluno?cmd=consultar&txtRa=<%=a.getRa()%>"><%=a.getNome()%></a></td>
 				<td><%=a.getEndereco()%></td>
 				<td><%=a.getEmail()%></td>
 				<td><%=data.format(a.getDataNascimento())%></td>
 				<td><%=a.getPeriodo()%></td>
-				<td><a href="html\alterar.html"><img src="https://cdn.discordapp.com/attachments/1141445347516874822/1153130944388136960/icon-1970472_1280.png" width="30" height="30"></a></td>
-				<td><a href="html\excluir.html"><img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699013-icon-27-trash-can-512.png" width="30" height="30"></a></td>
+				<td><a href="ServletAluno?cmd=alte&txtRa=<%=a.getRa()%>"><img src="https://cdn.discordapp.com/attachments/1141445347516874822/1153130944388136960/icon-1970472_1280.png" width="30" height="30"></a></td>
+				<td><a href="ServletAluno?cmd=excluir&txtRa=<%=a.getRa()%>"><img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699013-icon-27-trash-can-512.png" width="30" height="30"></a></td>
 			</tr>
 		
 		<%
